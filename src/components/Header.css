@@ -1,0 +1,120 @@
+.header-container {
+  position: relative;
+  width: 100%;
+  height: 420px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 28px;
+}
+
+/* poster strip - cinematic background */
+.poster-strip {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 14px;
+  padding: 24px 36px;
+  width: max-content;
+  animation: scrollPosters 36s linear infinite;
+  filter: brightness(0.85) contrast(1.05) saturate(1.05);
+  will-change: transform;
+}
+
+.poster {
+  width: 220px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.7);
+  transform: translateZ(0);
+  transition: transform 350ms cubic-bezier(0.2, 0.9, 0.3, 1), box-shadow 350ms;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+/* subtle parallax / hover lift when user hovers header area (desktop) */
+.header-container:hover .poster {
+  transform: translateY(4px) scale(0.99);
+}
+.header-container:hover .poster:hover {
+  transform: translateY(-8px) scale(1.06);
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.8);
+}
+
+/* overlay gradient to darken edges and center focus */
+.header-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(2, 2, 3, 0.2),
+    rgba(2, 2, 3, 0.65) 60%
+  );
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* center hero content */
+.header-content {
+  position: relative;
+  z-index: 5;
+  text-align: center;
+  padding: 20px;
+  backdrop-filter: none;
+  margin-top: -200px;
+}
+.header-title {
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 6px;
+  color: #fff;
+  text-shadow: 0 8px 30px rgba(0, 0, 0, 0.75);
+}
+.header-sub {
+  font-size: 1.05rem;
+  color: var(--muted);
+}
+
+/* scrolling animation */
+@keyframes scrollPosters {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* responsive */
+@media (max-width: 900px) {
+  .header-container {
+    height: 300px;
+  }
+  .poster {
+    width: 140px;
+    height: 210px;
+  }
+  .poster-strip {
+    gap: 10px;
+    padding: 12px;
+  }
+  .header-title {
+    font-size: 22px;
+  }
+}
+.header-title.light {
+  color: #111;
+}
+.header-title.dark {
+  color: #fff;
+}
+.header-sub.light {
+  color: #111;
+}
+.header-sub.dark {
+  color: #fff;
+}

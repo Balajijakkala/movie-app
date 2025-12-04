@@ -1,0 +1,48 @@
+.explore {
+  width: 100%;
+  padding: 18px 0 60px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 16px;
+  align-items: start;
+}
+.card {
+  background: var(--card);
+  border-radius: 12px;
+  overflow: hidden;
+  min-height: 280px;
+  transition: transform 0.25s, box-shadow 0.25s;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+}
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-2);
+}
+.card .poster {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+}
+.card .body {
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.card .title {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #fff;
+}
+.card .sub {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+.app.light .h2 { color: #111; }
+.app.dark  .h2 { color: #fff; }

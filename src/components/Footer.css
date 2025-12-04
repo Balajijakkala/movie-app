@@ -1,0 +1,25 @@
+.site-footer {
+  width: 100%;
+  padding: 26px 0;
+  margin-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.03);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.02), transparent);
+}
+.footer-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+.footer-inner a {
+  color: var(--muted);
+  text-decoration: none;
+}
+.footer-inner a:hover {
+  color: white;
+}

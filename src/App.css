@@ -1,0 +1,110 @@
+:root {
+  --bg: #0b0b0d;
+  --bg-2: #0f1113;
+  --card: #121315;
+  --muted: #bfc3c8;
+  --accent: #e50914; /* Netflix red */
+  --glass: rgba(255, 255, 255, 0.04);
+  --glass-2: rgba(255, 255, 255, 0.02);
+  --radius: 12px;
+  --shadow-1: 0 6px 20px rgba(0, 0, 0, 0.7);
+  --shadow-2: 0 12px 40px rgba(0, 0, 0, 0.6);
+  --max-width: 1200px;
+}
+
+* {
+  box-sizing: border-box;
+}
+html,
+body,
+#root {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial;
+  background: linear-gradient(180deg, var(--bg) 0%, #070708 40%, #040405 100%);
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.35;
+  min-height: 100vh;
+}
+
+/* App container */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* center layout */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Headings */
+.h1 {
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.h2 {
+  font-size: clamp(20px, 2.4vw, 26px);
+  font-weight: 600;
+  color: var(--muted);
+}
+
+/* utility */
+.flex {
+  display: flex;
+}
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mt-8 {
+  margin-top: 2rem;
+}
+.mb-8 {
+  margin-bottom: 2rem;
+}
+.p-8 {
+  padding: 2rem;
+}
+
+/* small text helper */
+.small {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* hide default scrollbar but keep scrollability */
+::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+.app.light {
+  background: #ffffff;
+  color: #000;
+}
+
+.app.dark {
+  background: linear-gradient(180deg, var(--bg) 0%, #070708 40%, #040405 100%);
+  color: #fff;
+}

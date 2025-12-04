@@ -1,0 +1,130 @@
+.navbar {
+  width: 100%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.35) 0%, transparent 100%);
+  backdrop-filter: blur(6px);
+  position: sticky;
+  top: 0;
+  z-index: 1200;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.nav-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  font-weight: 800;
+  color: white;
+  font-size: 1.1rem;
+  letter-spacing: 0.08em;
+}
+.logo .mark {
+  width: 36px;
+  height: 36px;
+  background: linear-gradient(135deg, #ff3b3b, #ff0000);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-1);
+  font-weight: 700;
+  color: #fff;
+}
+
+/* search */
+.nav-search {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.nav-search input {
+  width: 70%;
+  max-width: 520px;
+  background: var(--glass);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  padding: 10px 14px;
+  border-radius: 999px;
+  color: #fff;
+  outline: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
+}
+.nav-search input::placeholder {
+  color: rgba(255, 255, 255, 0.45);
+}
+.nav-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+/* theme toggle / small buttons */
+.icon-btn {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: var(--muted);
+  transition: all 0.16s ease;
+}
+.icon-btn:hover {
+  transform: translateY(-3px);
+  color: white;
+  border-color: rgba(255, 255, 255, 0.12);
+}
+.navbar.light {
+  background: rgba(255, 255, 255, 0.7);
+  color: #000;
+}
+
+.navbar.dark {
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+}
+/* NAVBAR THEME COLORS */
+.logo.light span {
+  color: #111;
+}
+
+.logo.dark span {
+  color: #fff;
+}
+
+/* Logo square box */
+.mark.dark {
+  background: #e50914;
+  color: white;
+}
+
+.mark.light {
+  background: #ffeded;
+  color: #e50914;
+}
+/* Placeholder theme */
+.search-input.light::placeholder {
+  color: #666;
+}
+.search-input.dark::placeholder {
+  color: #aaa;
+}
+
+/* Input text color */
+.search-input.light {
+  color: #111;
+  background: #f5f5f5;
+}
+.search-input.dark {
+  color: #fff;
+  background: var(--glass);
+}
