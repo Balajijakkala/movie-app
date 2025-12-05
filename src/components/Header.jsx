@@ -10,7 +10,7 @@ import p6 from "/src/assets/movies/m6.webp";
 import p7 from "/src/assets/movies/m7.webp";
 import p8 from "/src/assets/movies/m8.webp";
 
-export default function Header() {
+export default function Header({theme}) {
   const posters = [p1, p2, p3, p4, p5, p6, p7, p8];
 
   return (
