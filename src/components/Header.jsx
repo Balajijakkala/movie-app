@@ -13,25 +13,20 @@ import p8 from "/src/assets/movies/m8.webp";
 export default function Header({ theme }) {
   const posters = [p1, p2, p3, p4, p5, p6, p7, p8];
 
-
   return (
     <header className="header-container">
-      {/* SCROLLING POSTERS */}
       <div className="poster-strip">
         {posters.map((p, index) => (
           <img key={index} src={p} className="poster" />
         ))}
 
-        {/* duplicate posters for infinite loop */}
         {posters.map((p, index) => (
           <img key={index + posters.length} src={p} className="poster" />
         ))}
       </div>
 
-      {/* DARK OVERLAY FOR CINEMATIC LOOK */}
       <div className="header-overlay"></div>
 
-      {/* TEXT CONTENT */}
       <div className="header-content">
         <h1 className={`header-title ${theme}`}>
           Unlimited Movies, Just for You
